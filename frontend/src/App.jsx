@@ -6,6 +6,9 @@ import Layout from "./layouts/MainLayouts";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/login";
+import ProfileUI from "./pages/ProfileUI";
+import ReportUI from "./pages/ReportUI";
+
 
 function App() {
   return (
@@ -14,6 +17,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<ProfileUI />} />
+          <Route path="/report" element={<ReportUI />} /> 
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
